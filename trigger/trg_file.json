@@ -1,0 +1,30 @@
+{
+	"name": "trg_file",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_eventrigger",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"fname": "@triggerBody().fileName",
+					"foldername": "@triggerBody().Folderpath"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/input/blobs/employee",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/9369d1a1-65c3-449d-b3c7-dd65ff60f24e/resourceGroups/DP203/providers/Microsoft.Storage/storageAccounts/step4c",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}

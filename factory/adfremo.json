@@ -1,0 +1,9 @@
+{
+	"name": "adfremo",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fd60cc69-46ce-4718-af81-2b6a4ea7191c",
+		"tenantId": "18229696-76de-47f0-8782-d3c9d1d5e0ba"
+	}
+}
